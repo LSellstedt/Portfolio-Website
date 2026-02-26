@@ -1,0 +1,171 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+* {
+    margin: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+body {
+    background-color: khaki;
+}
+
+.topnav {
+    background-color: darkslategray;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.topnav img {
+    border-radius: 2vh;
+    width: 12vh;
+    height: 12vh;
+    margin: 1vh 0 1vh;
+}
+
+.nav-left {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-left div {
+    color: white;
+}
+
+.nav-left h1 {
+    margin-top: 0.5rem;
+}
+
+.nav-left h3 {
+    margin-bottom: 0.5rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 1.5rem;
+    grid-column: 3;
+    align-items: center;
+}
+
+.topnav a {
+    text-decoration: none;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+.contents {
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#Gameprojects {
+    grid-column: 1;
+    width: 100%
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+.media-scroller {
+    --_spacer: var(--size-3);
+    display: grid;
+    gap: var(--_spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+
+    padding: 0 var(--_spacer) var(--_spacer);
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-behavior: smooth;
+}
+
+.media-element {
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+    background: var(--surface-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+}
+
+.carousel-thumbnail {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.carousel-itch {
+    width: 2rem;
+    height: 2rem;
+}
+
+.snaps-inline {
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+
+.game-container {
+    position: relative;
+}
+
+.game-container img {
+    width: 100%;
+    height: 100%;
+    margin: 2vh;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.carousel-btn.left  { left: 0.5rem; }
+.carousel-btn.right { right: 0.5rem; }
+
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.85);
+}
+
+#Personalprojects {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.personal-container {
+    display: grid;
+}
+
+.h2-text {
+    text-align: center;
+    background-color: #04AA6D;
+    padding: 2.5vh 5vh 2.5vh 5vh;
+    border-radius: 2.5vh;
+    margin: 2.5vh;
+}
