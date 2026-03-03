@@ -13,6 +13,7 @@ body {
     background-color: #0d0d0d;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     color: #ffffff;
+    padding-top: 80px;
 }
 
 /* Navbar */
@@ -22,6 +23,20 @@ body {
     display: flex;
     justify-content: center;
     border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000; /* stays above everything */
+
+    background-color: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+
+    padding: 16px 24px;
 }
 
 /* Center container */
@@ -42,6 +57,39 @@ body {
 .nav-links {
     display: flex;
     gap: 28px;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between; /* pushes tags left, arrow right */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Tags styling */
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    background: rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Arrow */
+.project-arrow {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Hover effect */
+.project-card:hover .project-arrow {
+    color: white;
 }
 
 /* Individual links */
