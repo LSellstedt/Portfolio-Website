@@ -20,7 +20,7 @@ html,body {
 /* Page base */
 body {
     background-color: #0d0d0d;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: Roboto;
     color: #ffffff;
     padding-top: 80px;
 }
@@ -419,12 +419,6 @@ body {
     flex-grow: 1;           /* takes all available space */
 }
 
-/* Tags */
-.project-tags {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.5);
-}
-
 /* Image container */
 .project-image {
     width: 100%;
@@ -451,23 +445,28 @@ body {
 }
 
 .engine-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;               /* space between icon and text */
     position: absolute;
     top: 12px;
     left: 12px;
-
     font-size: 0.75rem;
     font-weight: 500;
-
     padding: 6px 10px;
     border-radius: 6px;
-
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0,0,0,0.6);
     color: #ffffff;
-
-    backdrop-filter: blur(6px); /* 🔥 modern glass effect */
+    backdrop-filter: blur(6px);
     border: 1px solid rgba(255,255,255,0.1);
-
     z-index: 2;
+}
+
+.engine-tag img {
+    width: 1.4em;             /* scales with font-size */
+    height: 1.6em;            /* keeps square ratio */
+    object-fit: contain;    /* keeps proportions */
+    display: block;
 }
 
 .hero-socials {
