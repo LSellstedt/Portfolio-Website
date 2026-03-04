@@ -94,9 +94,9 @@ body {
 
 .project-footer {
     display: flex;
-    justify-content: space-between; /* pushes tags left, arrow right */
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: auto;        /* pushes footer to bottom */
 }
 
 /* Name styling */
@@ -323,6 +323,9 @@ body {
 
 /* CARD */
 .project-card {
+    display: flex;           /* Flex container */
+    flex-direction: column;  /* Stack content vertically */
+    height: 100%;            /* Ensure full height in grid */
     text-decoration: none;
     color: inherit;
     padding: 32px;
@@ -354,6 +357,16 @@ body {
     margin-bottom: 16px;
 }
 
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* let content grow */
+}
+
+.project-main {
+    flex-grow: 1;           /* takes all available space */
+}
+
 /* Tags */
 .project-tags {
     font-size: 0.8rem;
@@ -368,6 +381,8 @@ body {
     border-radius: 10px;
     margin-bottom: 20px;
     position: relative;
+
+    flex-shrink: 0;  /* Prevent shrinking */
 }
 
 /* Image styling */
