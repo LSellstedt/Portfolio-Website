@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Project Title | Hector Vector</title>
+    <title>M0ther | Hector Vector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font Awesome -->
@@ -44,27 +44,45 @@
                 </p>
             </header>
 
-            <img src="images/mom.png" alt="Project cover image" class="article-hero-image">
-            <div class="article-actions">
+            <img src="images/mother.png" alt="Project cover image" class="article-hero-image">
+            <section>
+                <h2>Overview</h2>
+                <p>
+                    Inspired by games like Lemmings and Portal, M0THER will have you watchfully guiding adorable little critters by giving them crazy abilities!
+                    Guide your idiot children through the death maze of the testing facility! 
+                    The subjects make up for idiocy in cuteness.. But that does not generally do much for them when getting shredded.
+                </p>
+                <br>
                 <a href="files/m0ther-build.zip" class="btn-primary" download>
                     <i class="fa-brands fa-itch-io"></i>
                     Visit Itch.io page!
                 </a>
-            </div>
-            <section>
-                <h2>Overview</h2>
-                <p>
-                    This is where you describe the project in detail. Talk about
-                    design decisions, technical challenges, and lessons learned.
-                </p>
             </section>
 
             <section>
                 <h2>Technical Breakdown</h2>
                 <p>
-                    Explain systems, tools, architecture, networking, AI,
-                    gameplay logic, etc.
+                    For this game, I pushed myself by taking responsibility for most of the camera-related work, including camera transitions, object highlighting from the camera's point of view, and more. The cameras are a central part of the game, so when I was coding them, I had to make sure they were both efficient and easy for my team to use in their own levels.
+                    <br>I also worked on a few additional features, such as the level select in the main menu and the modification wheel within the different levels. I'm currently working on adding controller support to the game as well. It would've launched alongside the game, but I unfortunately fell ill last weekend of production, which was when I planned to finish up the remaining work for full support. It will, however, be added in a future patch.
                 </p>
+                <figure class="article-figure">
+                    <img src="images/mother_menu.png" alt="Camera selection system">
+                    <figcaption>
+                    This is the main menu of M0ther that I worked on. When you press play the middle text disappears and the screen turn into the different levels. That you can click on to enter your desired level.
+                    </figcaption>
+                </figure>
+                <figure class="article-figure">
+                    <img src="images/camera_selection.gif" alt="Camera selection system">
+                    <figcaption>
+                    Camera selection system using raycasts and layered transitions.
+                    </figcaption>
+                </figure>
+                <figure class="article-figure">
+                    <img src="images/ui_modifier_wheel.gif" alt="Camera selection system">
+                    <figcaption>
+                    The modification wheel uses the draw() function in Godot to draw the cirular image, the icons and the arrow that show which modification is selected.
+                    </figcaption>
+                </figure>
             </section>
 
             <section>
@@ -73,11 +91,7 @@
                     Reflection section. Employers love this.
                 </p>
             </section>
-            <section>
-                <a href="mailto:you@email.com" class="btn-primary">Download on Itch.io</a>
-            </section>
         </div>
     </main>
-
 </body>
 </html>

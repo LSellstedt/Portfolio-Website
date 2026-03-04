@@ -2,6 +2,9 @@
 /* GLOBAL RESET */
 /* ============================= */
 
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
 /* Reset */
 * {
     margin: 0;
@@ -170,10 +173,33 @@ body {
 .article p {
     margin-bottom: 16px;
     color: rgba(255,255,255,0.8);
+    max-inline-size: none !important;
 }
 
 .article-actions {
     margin-bottom: 48px;
+}
+
+.article-figure {
+    margin: 48px 0;
+    place-items: start;
+}
+
+.article-figure img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    aspect-ratio: 16 / 9;
+    display: block;
+}
+
+.article-figure figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.6);
+    text-align: left;
+    max-inline-size: none !important;
+    text-wrap-style: auto !important;
 }
 
 /* Primary button */
