@@ -1,0 +1,201 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page base */
+body {
+    background-color: #0d0d0d;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #ffffff;
+    padding-top: 80px;
+}
+
+/* Navbar */
+.topnav {
+    width: 100%;
+    padding: 24px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000; /* stays above everything */
+
+    background-color: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(10px);
+
+    padding: 16px 24px;
+}
+
+/* Center container */
+.nav-center {
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 24px;
+}
+
+/* Grid layout */
+.nav-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links container */
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+
+/* Individual links */
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Brand link */
+.brand {
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand:hover .name {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+/* Text container */
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between; /* pushes tags left, arrow right */
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Name styling */
+.name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Subtitle styling */
+.title {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-top: 2px;
+}
+
+/* ============================= */
+/* ARTICLE LAYOUT */
+/* ============================= */
+
+.article {
+    padding: 80px 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.article-container {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Header */
+
+.article-header {
+    margin-bottom: 48px;
+}
+
+.article-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.article-subtitle {
+    color: rgba(255,255,255,0.6);
+    font-size: 1.1rem;
+}
+
+/* Hero Image */
+
+.article-hero-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 48px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Sections */
+
+.article section {
+    margin-bottom: 48px;
+}
+
+.article h2 {
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+.article p {
+    margin-bottom: 16px;
+    color: rgba(255,255,255,0.8);
+}
+
+.article-actions {
+    margin-bottom: 48px;
+}
+
+/* Primary button */
+.btn-primary {
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+    opacity: 0.85;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .article-header h1 {
+        font-size: 2rem;
+    }
+}

@@ -59,38 +59,6 @@ body {
     gap: 28px;
 }
 
-.project-footer {
-    display: flex;
-    justify-content: space-between; /* pushes tags left, arrow right */
-    align-items: center;
-    margin-top: 20px;
-}
-
-/* Tags styling */
-.project-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.project-tags span {
-    background: rgba(255,255,255,0.08);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
-}
-
-/* Arrow */
-.project-arrow {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.5);
-}
-
-/* Hover effect */
-.project-card:hover .project-arrow {
-    color: white;
-}
 
 /* Individual links */
 .nav-links a {
@@ -124,6 +92,13 @@ body {
     flex-direction: column;
 }
 
+.project-footer {
+    display: flex;
+    justify-content: space-between; /* pushes tags left, arrow right */
+    align-items: center;
+    margin-top: 20px;
+}
+
 /* Name styling */
 .name {
     font-size: 1.25rem;
@@ -137,6 +112,32 @@ body {
     font-weight: 400;
     opacity: 0.6;
     margin-top: 2px;
+}
+
+/* Tags styling */
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    background: rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.7);
+}
+
+/* Arrow */
+.project-arrow {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Hover effect */
+.project-card:hover .project-arrow {
+    color: white;
 }
 
 /* HERO SECTION */
@@ -210,6 +211,7 @@ body {
     padding: 140px 24px;
     display: flex;
     justify-content: center;
+    min-height: calc(100vh - 80px);
 }
 
 .hero-container {
@@ -361,7 +363,7 @@ body {
 /* Image container */
 .project-image {
     width: 100%;
-    aspect-ratio: 16 / 9;   /* 🔥 Locks it to 16:9 */
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 20px;
