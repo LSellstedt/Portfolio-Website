@@ -1,6 +1,11 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
+:root {
+    --primary-accent-color: hsl(38, 97%, 55%); /* same as rgb(250,174,34) */
+    --primary-accent-color-darker: hsl(38, 89%, 18%); /* darker by lowering lightness */
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -63,7 +68,7 @@ body {
 /* Individual links */
 .nav-links a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.65);
+    color: #ffffff;
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -72,7 +77,7 @@ body {
 
 /* Hover effect */
 .nav-links a:hover {
-    color: #ffffff;
+    color: var(--primary-accent-color);
 }
 
 /* Brand link */
@@ -122,22 +127,22 @@ body {
 }
 
 .project-tags span {
-    background: rgba(255,255,255,0.08);
+    background: var(--primary-accent-color-darker);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
-    color: rgba(255,255,255,0.7);
+    color: var(--primary-accent-color);
 }
 
 /* Arrow */
 .project-arrow {
     font-size: 1rem;
-    color: rgba(255,255,255,0.5);
+    color: #ffffff;
 }
 
 /* Hover effect */
 .project-card:hover .project-arrow {
-    color: white;
+    color: var(--primary-accent-color);
 }
 
 /* HERO SECTION */
@@ -177,8 +182,8 @@ body {
 
 /* Primary button */
 .btn-primary {
-    background: #ffffff;
-    color: #000000;
+    background: var(--primary-accent-color);
+    color: #ffffff;
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -193,8 +198,8 @@ body {
 
 /* Secondary button */
 .btn-secondary {
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #ffffff;
+    border: 1px solid var(--primary-accent-color);
+    color: var(--primary-accent-color);
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -204,7 +209,9 @@ body {
 }
 
 .btn-secondary:hover {
-    border-color: rgba(255,255,255,0.4);
+    border-color: var(--primary-accent-color);
+    background: var(--primary-accent-color);
+    color: #ffffff;
 }
 
 #hero {
@@ -233,6 +240,10 @@ body {
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 20px;
+}
+
+.highlight-name {
+    color: var(--primary-accent-color);
 }
 
 /* HERO SUBTITLE CONTAINER */
@@ -281,7 +292,7 @@ body {
     height: 280px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.1);
+    border: 3px solid var(--primary-accent-color);
 }
 
 /* RESPONSIVE */
@@ -340,8 +351,12 @@ body {
 /* Hover effect */
 .project-card:hover {
     transform: translateY(-6px);
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid var(--primary-accent-color);
     background: rgba(255,255,255,0.04);
+}
+
+.project-card:hover h3 {
+    color: var(--primary-accent-color);
 }
 
 /* Title */
@@ -432,7 +447,7 @@ body {
 }
 
 .hero-socials a:hover {
-    color: #ffffff;
+    color: var(--primary-accent-color) ;
     transform: translateY(-2px);
 }
 
@@ -559,8 +574,8 @@ body {
 #connect .btn-primary {
     padding: 12px 28px;
     border-radius: 6px;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--primary-accent-color);
+    color: #ffffff;
     font-weight: 500;
     text-decoration: none;
     transition: opacity 0.2s ease;
@@ -584,7 +599,7 @@ body {
 }
 
 .connect-socials a:hover {
-    color: #ffffff;
+    color: var(--primary-accent-color);
     transform: translateY(-2px);
 }
 

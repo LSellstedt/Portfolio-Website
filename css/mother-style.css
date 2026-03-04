@@ -144,6 +144,22 @@ body {
     margin-bottom: 12px;
 }
 
+.article-header .header-top {
+    display: flex;
+    align-items: center;       /* vertically centers button with the title */
+    gap: 20px;                 /* space between title and button */
+    flex-wrap: wrap;           /* allows wrapping on smaller screens */
+}
+
+.article-header .header-top h1 {
+    margin: 0;                 /* remove extra spacing */
+    font-size: 2.5rem;
+}
+
+.article-header .header-top .btn-primary {
+    margin: 0;                 /* remove extra spacing */
+}
+
 .article-subtitle {
     color: rgba(255,255,255,0.6);
     font-size: 1.1rem;
