@@ -2,8 +2,8 @@
 @import "https://unpkg.com/open-props/normalize.min.css";
 
 :root {
-    --primary-color: hsl(38, 97%, 55%); /* same as rgb(250,174,34) */
-    --primary-color-darker: hsl(38, 89%, 18%); /* darker by lowering lightness */
+    --primary-color: hsl(27, 97%, 55%);
+    --primary-color-darker: hsl(38, 89%, 18%);
     --default-text-color: hsl(0, 0%, 100%);
     --sub-text-color: hsl(0 0% 100% / 0.6);
 }
@@ -30,24 +30,21 @@ body {
 /* Navbar */
 .topnav {
     width: 100%;
-    padding: 24px 0;
     display: flex;
     justify-content: center;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-}
 
-.topnav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
 
-    z-index: 1000; /* stays above everything */
+    z-index: 1000;
 
     background-color: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(10px);
 
     padding: 16px 24px;
+
 }
 
 /* Center container */
@@ -407,6 +404,7 @@ body {
     transition: transform 0.25s ease,
                 border 0.25s ease,
                 background 0.25s ease;
+                
 }
 
 /* Hover effect */
@@ -456,7 +454,7 @@ body {
 }
 
 /* Image styling */
-.project-image img {
+.project-image .card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -464,7 +462,7 @@ body {
 }
 
 /* Smooth zoom effect on hover */
-.project-card:hover .project-image img {
+.project-card:hover .project-image .card-image {
     transform: scale(1.05);
 }
 
