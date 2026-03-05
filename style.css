@@ -279,15 +279,25 @@ body {
 
 /* Scroller itself */
 .hero-scroller {
-    display: inline-flex;
-    gap: 8px;
-    animation: scrollLeft 15s linear infinite;
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 18s linear infinite;
+    will-change: transform;
 }
 
-/* Animation */
+.hero-group {
+    display: flex;
+    gap: 8px;
+    padding-right: 8px; /* spacing between loops */
+}
+
 @keyframes scrollLeft {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 /* Tags */
@@ -314,16 +324,7 @@ body {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-}
-
-/* ANIMATION */
-@keyframes scrollLeft {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    flex-shrink: 0;
 }
 
 /* IMAGE SIDE */
@@ -580,6 +581,7 @@ body {
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    border: 3px solid var(--primary-color);
 }
 
 /* Text column */
