@@ -8,6 +8,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Your Main CSS -->
     <link rel="stylesheet" href="css/mother-style.css">
@@ -19,7 +20,7 @@
         <div class="nav-grid">
             <a href="#" class="brand">
                 <div class="brand-text">
-                    <span class="name">Linus Sellstedt</span>
+                    <span class="name">Hector Vector</span>
                     <span class="title">Gameplay & Tools Programmer</span>
                 </div>
             </a>
@@ -38,11 +39,7 @@
         <div class="article-container">
             <header class="article-header">
                 <div class="header-top">
-                    <h1>M0ther</h1>
-                    <a href="files/m0ther-build.zip" class="btn-primary" download>
-                        <i class="fa-brands fa-itch-io"></i>
-                        Visit Itch.io page!
-                    </a>
+                    <h1>M0THER</h1>
                 </div>
                 <p class="article-subtitle">
                     Camera rotations and raycasts who could've thought it would be such a nightmare.
@@ -70,18 +67,37 @@
                     For this game, I pushed myself by taking responsibility for most of the camera-related work, including camera transitions, object highlighting from the camera's point of view, and more. The cameras are a central part of the game, so when I was coding them, I had to make sure they were both efficient and easy for my team to use in their own levels.
                     <br>I also worked on a few additional features, such as the level select in the main menu and the modification wheel within the different levels. I'm currently working on adding controller support to the game as well. It would've launched alongside the game, but I unfortunately fell ill last weekend of production, which was when I planned to finish up the remaining work for full support. It will, however, be added in a future patch.
                 </p>
+                <h3>Main menu</h3>
+                <p>
+                    Despite being a core feature in every game we decided not to lay too much time on the main menu until the very end of the project. It was at that time we decided that we should have a interactable 3D main menu.
+                    I decided to take on the challenge to create such a thing as I had already been working on a lot of stuff with raycasts like the cameras and traps. <br> <br>So how did I go about making the main menu? Well I took some of my previous camera code
+                    and shoved it into our temporary main menu. We already had a 3D scene with a bunch of the screen so I just needed to give them a collision shape and then make it so my raycast from the camera in the main menu scene was looking for that collision layer.
+                    Once that was done I had to find a way to work with the materials on the screens so they could go from being a black screen with maybe some orange text into actually showing the levels. <br><br>Luckily for me the artists on the team had setup the TV:s with two textures.
+                    One of the texture was for the screen which was exactly what I needed. So I took that one and made my own material that just had a simple PNG of the level except it was rotate 90 degrees due to how the normals on the screen were set up.
+                </p>
                 <figure class="article-figure">
                     <img src="images/mother_menu.png" alt="Camera selection system">
                     <figcaption>
                     This is the main menu of M0ther that I worked on. When you press play the middle text disappears and the screen turn into the different levels. That you can click on to enter your desired level.
                     </figcaption>
                 </figure>
+                <h3>Cameras and Traps</h3>
+                <p>
+                    This was the longest I had ever sat down with one thing and one thing only and actually enjoyed every second of it!
+                </p>
                 <figure class="article-figure">
                     <img src="images/camera_selection.gif" alt="Camera selection system">
                     <figcaption>
-                    Camera selection system using raycasts and layered transitions.
+                    Camera selection system using raycasts and a heavily modified shader from <a href="https://godotshaders.com/" target="_blank" class="highlight-link-name">Godot shaders <i class="fa-solid fa-arrow-up-right-from-square"></i></a>.
                     </figcaption>
                 </figure>
+                <h3>Modification Wheel</h3>
+                <p>
+                    After working on the camera system, next up was the selection wheel. This wheel was meant to help us get away from binding each modification to a different key on the keyboard thus making the game way more difficult for potential controller support.
+                    So after disccusing it with the team we decided to take this approach. The wheel is to be used as a tool to select what modification to use on the creatures as they run around the map. <br>
+                    We draw the wheel entirely in the Godot function _draw() because that means we can limit the amount of times it needs to be told "hey don't do anything with this" and instead focus on telling it when it should be doing something.
+                    If we add for example an arrow to the wheel we can queue_redraw() it so it places the arrow once at the right place same with the icons. It was a very performative way of handling it and I'm glad that I discovered it so early on.
+                </p>
                 <figure class="article-figure">
                     <img src="images/ui_modifier_wheel.gif" alt="Camera selection system">
                     <figcaption>
@@ -96,6 +112,34 @@
                     Reflection section. Employers love this.
                 </p>
             </section>
+<section id="connect">
+    <div class="connect-container">
+        <!-- Heading -->
+        <h2>Like what you're reading?</h2>
+
+        <!-- Paragraph -->
+        <p>Let's connect so we can talk more about it!</p>
+
+        <!-- Contact Button -->
+        <a href="mailto:you@email.com" class="btn-primary">Connect on LinkedIn</a>
+
+        <!-- Social Icons -->
+        <div class="connect-socials">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://itch.io" target="_blank" aria-label="Itch.io">
+                <i class="fa-brands fa-itch-io"></i>
+            </a>
+            <a href="https://github.com" target="_blank" aria-label="GitHub">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+        </div>
+    </div>
+</section>
         </div>
     </main>
 </body>

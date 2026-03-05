@@ -281,7 +281,7 @@ body {
 .hero-scroller {
     display: inline-flex;
     gap: 8px;
-    animation: scrollLeft 30s linear infinite;
+    animation: scrollLeft 15s linear infinite;
 }
 
 /* Animation */

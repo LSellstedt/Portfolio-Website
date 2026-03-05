@@ -5,6 +5,13 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
+:root {
+    --primary-color: hsl(38, 97%, 55%); /* same as rgb(250,174,34) */
+    --primary-color-darker: hsl(38, 89%, 18%); /* darker by lowering lightness */
+    --default-text-color: hsl(0, 0%, 100%);
+    --sub-text-color: hsl(0 0% 100% / 0.6);
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -15,8 +22,8 @@
 /* Page base */
 body {
     background-color: #0d0d0d;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #ffffff;
+    font-family: Roboto;
+    color: var(--default-text-color);
     padding-top: 80px;
 }
 
@@ -35,7 +42,7 @@ body {
     left: 0;
     width: 100%;
 
-    z-index: 1000; /* stays above everything */
+    z-index: 1000;
 
     background-color: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(10px);
@@ -67,7 +74,7 @@ body {
 /* Individual links */
 .nav-links a {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.65);
+    color: var(--default-text-color);
     font-size: 0.9rem;
     font-weight: 400;
     letter-spacing: 0.4px;
@@ -76,7 +83,7 @@ body {
 
 /* Hover effect */
 .nav-links a:hover {
-    color: #ffffff;
+    color: var(--primary-color);
 }
 
 /* Brand link */
@@ -152,16 +159,16 @@ body {
 }
 
 .article-header .header-top h1 {
-    margin: 0;                 /* remove extra spacing */
+    margin: 0;
     font-size: 2.5rem;
 }
 
 .article-header .header-top .btn-primary {
-    margin: 0;                 /* remove extra spacing */
+    margin: 0;
 }
 
 .article-subtitle {
-    color: rgba(255,255,255,0.6);
+    color: var(--sub-text-color);
     font-size: 1.1rem;
 }
 
@@ -186,10 +193,16 @@ body {
     font-size: 1.5rem;
 }
 
+.article h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+}
+
 .article p {
     margin-bottom: 16px;
-    color: rgba(255,255,255,0.8);
+    color: var(--sub-text-color);
     max-inline-size: none !important;
+    font-size: 1.0rem;
 }
 
 .article-actions {
@@ -210,18 +223,29 @@ body {
 }
 
 .article-figure figcaption {
-    margin-top: 12px;
+    margin-top: 6px;
     font-size: 0.9rem;
-    color: rgba(255,255,255,0.6);
+    color: var(--sub-text-color);
     text-align: left;
     max-inline-size: none !important;
     text-wrap-style: auto !important;
 }
 
+.highlight-name {
+    color: var(--primary-color);
+}
+.highlight-link-name {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.highlight-link-name:hover {
+    opacity: 0.85;
+}
+
 /* Primary button */
 .btn-primary {
-    background: #ffffff;
-    color: #000000;
+    background: var(--primary-color);
+    color: var(--default-text-color);
     padding: 10px 20px;
     border-radius: 6px;
     text-decoration: none;
@@ -239,5 +263,124 @@ body {
 @media (max-width: 768px) {
     .article-header h1 {
         font-size: 2rem;
+    }
+}
+
+/* CONNECT SECTION */
+#connect {
+    background-color: #0d0d0d;
+    padding: 120px 24px;
+    display: flex;
+    justify-content: center; /* centers container horizontally */
+    text-align: center;      /* centers all inner text */
+}
+
+.connect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* centers heading, paragraph, button, socials vertically */
+    gap: 24px;               /* spacing between elements */
+    max-width: 800px;
+    width: 100%;
+    color: var(--default-text-color);
+}
+
+/* Heading */
+#connect h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Paragraph */
+#connect p {
+    font-size: 1rem;
+    color: var(--sub-text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Button */
+#connect .btn-primary {
+    padding: 12px 28px;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--default-text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+#connect .btn-primary:hover {
+    opacity: 0.85;
+}
+
+/* Social Icons */
+.connect-socials {
+    display: flex;
+    gap: 28px;
+    justify-content: center;  /* ensures icons are centered */
+}
+
+.connect-socials a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    color: var(--sub-text-color);
+    font-size: 1.2rem;
+
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.connect-socials a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--primary-color-darker);
+
+    transform: scale(0.6);
+    opacity: 0;
+
+    transition: transform 0.25s ease, opacity 0.25s ease;
+
+    z-index: 0; /* behind icon */
+}
+
+.connect-socials a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.connect-socials a:hover::before {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.connect-socials a i {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+.connect-socials a:hover i {
+    transform: scale(1.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    #connect {
+        padding: 80px 24px;
+    }
+
+    #connect h2 {
+        font-size: 1.75rem;
     }
 }
