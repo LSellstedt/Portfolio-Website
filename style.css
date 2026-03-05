@@ -566,6 +566,7 @@ body {
     gap: 60px;
     max-width: 1100px;
     width: 100%;
+    text-align: center;
 }
 
 /* Image column */
@@ -584,6 +585,9 @@ body {
 
 /* Text column */
 .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 2 1 400px;
     color: var(--default-text-color);
 }
@@ -628,8 +632,14 @@ body {
         margin-bottom: 32px;
     }
 
+    .about-text {
+        text-align: center;   /* center all text inside */
+    }
+
     .about-text h2 {
-        font-size: 1.75rem;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .about-text p {
