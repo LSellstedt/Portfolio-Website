@@ -192,7 +192,7 @@ body {
 
 .article h3 {
     margin-bottom: 8px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .article p {
@@ -221,7 +221,7 @@ body {
 
 .article-figure figcaption {
     margin-top: 6px;
-    font-size: 0.9rem;
+    font-size: 0.84rem;
     color: var(--sub-text-color);
     text-align: left;
     max-inline-size: none !important;
