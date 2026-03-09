@@ -1,35 +1,26 @@
-function changeImage(){
-    let displayImage = document.getElementById('hero-image')
-    if(displayImage.src.match('images/Screenshot_20260305_104714_Instagram.png')){
-        displayImage.src = 'images/profile_picture.webp'
-    } else {
-        displayImage.src = 'images/Screenshot_20260305_104714_Instagram.png'
-    }
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+function setActiveLink() {
+    let scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute("id");
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+            });
+
+            const activeLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+            if (activeLink) {
+                activeLink.classList.add("active");
+            }
+        }
+    });
 }
 
-let flipped = false;
-let isAnimating = false;
-
-function flipImage() {
-
-    if (isAnimating) return;
-    isAnimating = true;
-
-    const img = document.getElementById('hero-image');
-
-    img.style.transform = flipped 
-        ? 'rotateY(0deg)' 
-        : 'rotateY(180deg)';
-
-    setTimeout(() => {
-        img.src = flipped
-            ? 'images/profile_picture.webp'
-            : 'images/Screenshot_20260305_104714_Instagramflipped.png';
-
-        flipped = !flipped;
-    }, 200);
-
-    setTimeout(() => {
-        isAnimating = false;
-    }, 400);
-}
+window.addEventListener("scroll", setActiveLink);

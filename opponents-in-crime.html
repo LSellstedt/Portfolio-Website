@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Opponents in Crime | Linus Sellstedt</title>
-    <link rel="icon" type="image/x-icon" href="images/profile_picture.webp">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Font Awesome -->
@@ -27,6 +27,7 @@
             </a>
 
             <div class="nav-links">
+                <a href="index.html">Home</a>
                 <a href="index.html#projects">Projects</a>
                 <a href="index.html#about-me">About</a>
                 <a href="index.html#connect">Contact</a>
@@ -77,12 +78,18 @@
                 </figure>
                 <h3>Stamina bar and tracking arrows</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates molestias repudiandae a sed, similique vel culpa? Blanditiis, fuga ea!
+                    I decided to leave my comfort zone a little bit in the project as well by trying to do some UI work that required interaction with 3D objects. This was very difficult for me as what I needed to do was quite niche at least in the way we wanted it in our game.
+                    It is somewhat similar to a compass in games like Fortnite but instead we wanted it surrounding the player. To accomplish this I made sure all our arrow textures where in a square and placed in a specific way to
+                    make sure it rotated nicely. 
+                </p>
+                <p>
+                    For the stamina bar I placed a plane underneath the player that had a special material that I modified through blueprints to make it. It's on a delayed timer to fill up and that delay gets increased if the player were to use all of their stamina.
+                    It also has a state check to know when it needs to switch to red to help tell the player that they are running out of stamina. This was entirely inspired by the Zelda Breath of the Wild stamina bar.
                 </p>
                 <figure class="article-figure">
                 <img src="images/staminabar.gif" alt="">
                 <figcaption>
-                    Arrows that rotate to the different arts that you can steal from the museum.
+                    This is how the final arrows and the stamina bar looks.
                 </figcaption>
                 </figure>
 
@@ -91,7 +98,13 @@
             <section>
                 <h2>What I Learned</h2>
                 <p>
-                    Reflection section. Employers love this.
+                    From this project I learned that Unreal Engine is not what I first thought and that maybe I had been putting off trying it for a bad reason.
+                    I had been afraid that I couldn't possibly use it because I didn't know any C++ but with this project I learned that I don't really need to know that as most thing in Unreal can just be done with blueprints.
+                    Hell it's even preferred for most things!
+                </p>
+                <p>
+                    After this project I also felt ready to move out of my comfort zone more often as I found the work on the stamina bar and tracker arrows to be some of the most fun work I'd done in a while. It felt so rewarding to see the fruits of my hard labor.
+                    
                 </p>
             </section>
 <section id="connect">
@@ -100,7 +113,7 @@
 
         <p>Let's connect so we can talk more about it!</p>
 
-        <a href="https://www.linkedin.com/in/lsellstedt/" class="btn-primary">Connect on LinkedIn</a>
+        <a href="https://www.linkedin.com/in/lsellstedt/" target="_blank" class="btn-primary">Connect on LinkedIn</a>
 
         <div class="connect-socials">
             <a href="https://www.linkedin.com/in/lsellstedt/" target="_blank" aria-label="LinkedIn">
@@ -109,14 +122,19 @@
             <a href="https://sellstedt.itch.io/" target="_blank" aria-label="Itch.io">
                 <i class="fa-brands fa-itch-io"></i>
             </a>
-            <a href="https://x.com" target="_blank" aria-label="X.com">
-                <i class="fa-brands fa-x-twitter"></i>
+            <a href="mailto:linus@sellstedt.se" target="_blank" aria-label="Mail">
+                <i class="fa-solid fa-envelope"></i>
             </a>
         </div>
     </div>
 </section>
         </div>
     </main>
-
+<footer class="site-footer">
+    <div class="footer-container">
+        <p>Linus Sellstedt</p>
+        <p>Gameplay & Tools Programmer</p>
+    </div>
+</footer>
 </body>
 </html>

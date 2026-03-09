@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Page base */
 body {
     background-color: #0d0d0d;
@@ -120,6 +124,26 @@ body {
     font-weight: 400;
     opacity: 0.6;
     margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+
+    .nav-grid {
+        flex-direction: column;
+        align-items: center;   /* center horizontally */
+        text-align: center;    /* center text */
+        gap: 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .brand-text {
+        align-items: center;   /* center the name + title stack */
+    }
+
 }
 
 /* ============================= */
@@ -380,4 +404,31 @@ body {
     #connect h2 {
         font-size: 1.75rem;
     }
+}
+
+/* FOOTER */
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 24px;
+
+    border-top: 1px solid rgba(255,255,255,0.05);
+
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--sub-text-color);
 }
